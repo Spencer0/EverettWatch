@@ -128,11 +128,16 @@ function login() {
   //hide login screen and show feed screen
   itemHide(document.getElementById("loginModeDiv"))
   itemBlock(document.getElementById("dataPageDiv"))
-
+  var id_slot = document.getElementById("userID")
+  id_slot.append(window.localStorage.getItem("userID"))
 
   //Save the current user name to local storage
   console.log("Storing: ", document.getElementById("emailInput").value, " In local storage ")
   window.localStorage.setItem("UserName", document.getElementById("emailInput").value)
+
+  var id_slot = document.getElementById("userID")
+  id_slot.innerHTML = window.localStorage.getItem("UserName")
+
   loggedInUser = document.getElementById("emailInput").value
   //Set mode to current mode
   mode = "dataMode"
