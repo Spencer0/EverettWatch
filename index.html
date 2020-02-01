@@ -1,44 +1,39 @@
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Begin HEAD section of document. Here we must use HTML comments as shown
+
+<head>
+  <!-- Begin HEAD section of document. Here we must use HTML comments as shown
     here. -->
-    <!-- Default target for all hyperlinks in this file:
+  <!-- Default target for all hyperlinks in this file:
     https://www.w3schools.com/tags/att_base_target.asp -->
-    <base target="_top"> 
-    <!-- Provide metadata on this file. Can be used by browsers, search engines,
+  <base target="_top">
+  <!-- Provide metadata on this file. Can be used by browsers, search engines,
     etc. -->
-    <meta charset="utf-8">
-    <!-- HTML5 method that specifies viewable part of page ('viewport'). Always
+  <meta charset="utf-8">
+  <!-- HTML5 method that specifies viewable part of page ('viewport'). Always
          use the following, which sets the width of the page to the width of the
          device and scales page content to fit into page-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Import External stylesheets and libraries using 'CDN' (content delivery
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Import External stylesheets and libraries using 'CDN' (content delivery
     network) links: -->
-    <link rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous">    
-    <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous">
-    <!-- Our local CSS stylesheet -->
-    <link rel="stylesheet" href = "styles/index.css">
-    <link rel="stylesheet" href = "styles/modal.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Our local CSS stylesheet -->
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/modal.css">
 
 </head>
- 
+
 <body>
   <!-- Begin the BODY section of the document.  -->
-  
+
   <!-- Fixed menu and button content goes here to define app structure: the top
        bar, the side menu, the bottom bar, and the floating contextual action
        button  -->
   <!-- The top navigation bar -->
-  <div id="navBar" class="navbar">  
+  <div id="navBar" class="navbar">
     <span class="navbarItems">
       <button id="menuBtn" style="background-color: transparent;
       border-color:#13294E; text-align: center">
@@ -52,111 +47,106 @@
         font-size: 30px; cursor:pointer; text-align: center">
         </span>
       </button>
-      <img src="http://tiny.cc/sslogo" alt="Speed Score Logo" height="38px"
-      width="38px">
+      <img src=logo.JPG alt="Speed Score Logo" height="38px">
       <span id="topBarTitleWelcome" style="color:white; font-size: 18px">
-      Welcome!</span>
-      <span id="topBarTitleData" style="color:white; font-size: 18px">
-      The Data.</span>
+       </span>
+        <span id="topBarTitleData" style="color:white; font-size: 18px">
+        The Data.</span>
   </div>
-  
-  
- <!--BEGIN SIDE MENU -->
- <div id="sideMenu" class="sidenav" >
-   <!--SIDE MENU TITLE -->
-  <div class="sidenavtitle">
+
+
+  <!--BEGIN SIDE MENU -->
+  <div id="sideMenu" class="sidenav">
+    <!--SIDE MENU TITLE -->
+    <div class="sidenavtitle">
       <img src='http://tiny.cc/chrisprofilepic' height='50' width='50'>
       <span id="userID" style="font-size:14px">&nbsp;Chris
-      Hundhausen&nbsp;&nbsp;</span>
-   </div>
-   <!--BEGIN MENU CONTENT-->
-   <div id="optionalMainMenuContent">
-    <!--BEGIN GROUP OF MODE/ACTION BUTTONS -->
-    <!--Mode buttons show current mode Action buttons are contextual; they provide
+        Hundhausen&nbsp;&nbsp;</span>
+    </div>
+    <!--BEGIN MENU CONTENT-->
+    <div id="optionalMainMenuContent">
+      <!--BEGIN GROUP OF MODE/ACTION BUTTONS -->
+      <!--Mode buttons show current mode Action buttons are contextual; they provide
        easy access to most important functionality in current mode 
      -->
-     <a class="menuItem dataMenuItem" id="addBtn"><span class="fas fa-plus"></span>&nbsp;add</a>
-     <a class="menuItem dataMenuItem menuItemSelected" id="viewBtn"><span class="fas fa-eye"></span>&nbsp;view</a>
+      <a class="menuItem dataMenuItem" id="addBtn"><span class="fas fa-plus"></span>&nbsp;add</a>
+      <a class="menuItem dataMenuItem menuItemSelected" id="viewBtn"><span class="fas fa-eye"></span>&nbsp;view</a>
       <!-- END GROUP OF MODE/ACTION BUTTONS -->
-   </div>
- <div id="mainMenuContent">
- <!--BEGIN GROUP OF MODE/ACTION BUTTONS -->
- <!--Mode buttons show current mode Action buttons are contextual; they provide
+    </div>
+    <div id="mainMenuContent">
+      <!--BEGIN GROUP OF MODE/ACTION BUTTONS -->
+      <!--Mode buttons show current mode Action buttons are contextual; they provide
     easy access to most important functionality in current mode 
   -->
-  <a id="logOutBtn"><span class="fas fa-sign-out-alt"></span>&nbsp;Log Out</a>
-  <a id="aboutBtn"><span class="fas fa-info-circle"></span>&nbsp;About</a>
-   <!-- END GROUP OF MODE/ACTION BUTTONS -->
-</div>
-<!-- END MAIN MENU CONTENT -->
-</div>
-<!-- END SIDEMENU -->
+      <a id="logOutBtn"><span class="fas fa-sign-out-alt"></span>&nbsp;Log Out</a>
+      <a id="aboutBtn"><span class="fas fa-info-circle"></span>&nbsp;About</a>
+      <!-- END GROUP OF MODE/ACTION BUTTONS -->
+    </div>
+    <!-- END MAIN MENU CONTENT -->
+  </div>
+  <!-- END SIDEMENU -->
 
-<!-- BEGIN FIXED BOTTOM BAR -->
-<div id ="bottomBar" class="bottombar" style="z-index: 100">
-<a id="mode1" class="bottomBarBtn"><span style="display:block; padding-top:3px"
-class="nonMenuItem fas fa-th-list"></span><span style="display:block;font-size:
+  <!-- BEGIN FIXED BOTTOM BAR -->
+  <div id="bottomBar" class="bottombar" style="z-index: 100">
+    <a id="mode1" class="bottomBarBtn"><span style="display:block; padding-top:3px"
+        class="nonMenuItem fas fa-th-list"></span><span style="display:block;font-size:
 small">Data</span></a>
-<a id="mode2" class="bottomBarBtn"><span style="display:block; padding-top:3px"
-class="nonMenuItem fas fa-plus"></span><span style="display:block;font-size:
+    <a id="mode2" class="bottomBarBtn"><span style="display:block; padding-top:3px"
+        class="nonMenuItem fas fa-plus"></span><span style="display:block;font-size:
 small">TBD</span></a>
-</div>
-<!-- END FIXED BOTTOM BAR-->
- 
+  </div>
+  <!-- END FIXED BOTTOM BAR-->
+
   <!-- BEGIN APP PAGE DEFINITIONS -->
 
-   <div id="loginModeDiv" class="paddedPage">
+  <div id="loginModeDiv" class="paddedPage">
     <center>
       <h1></h1>
       <form id="loginInterface">
-                 <label for="emailInput" style="padding:0px;
+        <label for="emailInput" style="padding:0px;
                  font-size:24px">Email:
-                     <input class="form-control login-input" type="email" 
-                     placeholder="Enter Email Address" id="emailInput"
-                     pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
-                     style="text-align:center;width:90%; height:10%; font-size:
+          <input class="form-control login-input" type="email" placeholder="Enter Email Address" id="emailInput"
+            pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" style="text-align:center;width:90%; height:10%; font-size:
                      24px" required>
-                 </label>
-                 <p></p>
-                 <label for="passwordInput" style="padding:0px;
-                 font-size:24px">Password: 
-                     <input class="form-control login-input" type="password"
-                     placeholder="Enter Password" id="passwordInput"
-                     pattern="[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':]+"
-                     style="text-align:center;width:90%; height:10%; font-size:
+        </label>
+        <p></p>
+        <label for="passwordInput" style="padding:0px;
+                 font-size:24px">Password:
+          <input class="form-control login-input" type="password" placeholder="Enter Password" id="passwordInput"
+            pattern="[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':]+" style="text-align:center;width:90%; height:10%; font-size:
                      24px" required>
-                 </label>
-             <p class="bg-danger" id = "feedback" style="font-size:16px"></p>
-             <button type="submit" id="loginBtn" class="loginBtn btn btn-primary
+        </label>
+        <p class="bg-danger" id="feedback" style="font-size:16px"></p>
+        <button type="submit" id="loginBtn" class="loginBtn btn btn-primary
              btn-block btncolortheme" style="width:70%; font-size: 36px">
-               <span id="loginBtnIcon"></span>
-                Log In
-                </button>
-             <br />
-             <a role="button" class="loginBtn"><img
-             src="https://drive.google.com/uc?export=view&id=1YXRuG0pCtsfvbDSTzuM2PepJdbBpjEut"></a>
-             <a role="button" class="loginBtn"><img
-             src="https://drive.google.com/uc?export=view&id=1ZoySWomjxiCnC_R4n9CZWxd_qXzY1IeL"></a>    
-         </form>
-       </center>
-   </div>
- 
-   <!-- Activity feed page for viewing feed -->
-   <div id="dataPageDiv"  class="paddedPage">
-    <h1 align="center">Data Table Page</h1> <!-- <-- Change this-->
-    <div w3-include-html="html/dataTable.html" ></div>
+          <span id="loginBtnIcon"></span>
+          Log In
+        </button>
+        <br />
+        <a role="button" class="loginBtn"><img
+            src="https://drive.google.com/uc?export=view&id=1YXRuG0pCtsfvbDSTzuM2PepJdbBpjEut"></a>
+        <a role="button" class="loginBtn"><img
+            src="https://drive.google.com/uc?export=view&id=1ZoySWomjxiCnC_R4n9CZWxd_qXzY1IeL"></a>
+      </form>
+    </center>
   </div>
 
-   <!-- Rounds page displaying the user's round history -->
+  <!-- Activity feed page for viewing feed -->
+  <div id="dataPageDiv" class="paddedPage">
+    <h1 align="center">Data Table Page</h1> <!-- <-- Change this-->
+    <div w3-include-html="html/dataTable.html"></div>
+  </div>
+
+  <!-- Rounds page displaying the user's round history -->
   <div id="addDataPageDiv" class="paddedPage">
-      <h1 align="center">Add Data Page</h1>
-    <div w3-include-html="html/dataAdd.html" ></div>
+    <h1 align="center">Add Data Page</h1>
+    <div w3-include-html="html/dataAdd.html"></div>
   </div>
 
   <div id="modeTwoDiv" class="paddedPage">
     <h1 align="center">This is still going through the requirment phase!</h1>
-  <div w3-include-html="html/underConstruction.html" ></div>
-</div>
+    <div w3-include-html="html/underConstruction.html"></div>
+  </div>
 
   <!-- END APP PAGE DEFINITIONS -->
   <!-- MODAL DEFINITION -->
@@ -188,7 +178,7 @@ small">TBD</span></a>
   </div>
 
   <!-- Begin SCRIPT section of document. -->
-  
+
   <script src="scripts/includeHTML.js"></script>
   <script src="scripts/eventHandlers.js"></script>
   <script src="scripts/startUp.js"></script>

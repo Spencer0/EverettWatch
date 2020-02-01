@@ -2,7 +2,7 @@
         .navbar {
             overflow: hidden; /* Don't allow scrolling */
             display: block; /* Occupies its own horizontal space */
-            background-color: #13294E;
+            background-color: #192B3D;
             position: fixed; /* Doesn't move */
             top: 0;
             width: 100%; /* 100% of width of screen */
@@ -28,7 +28,7 @@
             z-index: 150; /* Force the menu to be at front */
             top: 48px; /* Position menu 48 px from top of screen; accomodates top navbar */
             left: 0; /* Position the menu on the left hand side */
-            background-color: #13294E; /* Background color is dark blue */
+            background-color: #192B3D; /* Background color is dark blue */
             overflow-x: hidden; /* Don't allow horizontal scroll */
             transition: 0.5s; /* Animation transition time is 0.5 sec */
             padding-top: 2px; /* Place menu content 60 px from top */
@@ -46,12 +46,12 @@
          /* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
          
          .sidenav a:visited {
-          background-color:  #13294E !important;
+          background-color:  #192B3D !important;
           color: white !important;
         }
         
         .sidenav a:active {
-          background-color:  #13294E !important;
+          background-color:  #192B3D !important;
           color: white !important;
         }
 
@@ -102,14 +102,14 @@
          
         /* The SpeedScore dark blue color theme  */       
         .btncolortheme {
-                background-color: #13294E;
+                background-color: #192B3D;
                 color: white;
             }
             
          /* The color theme when a bottom bar menu item is selected */
          .btnaltcolortheme {
                 background-color: #F0F0F0;
-                color: #13294E;
+                color: #192B3D;
             }
 
         /* change items to gray when disabled class is applied  */
@@ -120,8 +120,8 @@
           
         .btncolorthemeoutline {
                 border: 2px;
-                border-color: #13294E !important;
-                color: #13294E !important;
+                border-color: #192B3D !important;
+                color: #192B3D !important;
         }
       
 /* Styling for the page divs in the app. Ensures that the content at top isn't
@@ -144,7 +144,7 @@
     
 /* Styling for a navbar at the bottom of the page */
 .bottombar {
-    background-color: #13294E;
+    background-color: #192B3D;
     overflow: hidden;
     position: fixed;
     bottom: 0;
@@ -168,7 +168,7 @@
 /* Add a gray background color to the active link in the bottom bar */
 .bottombar a:active {
     background-color: #F0F0F0;
-    color: #13294E;
+    color: #192B3D;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
@@ -195,7 +195,7 @@
 	height:60px;
 	bottom:60px;
 	right:40px;
-	background-color:#13294E;
+	background-color:#192B3D;
 	color:white;
 	border-radius:50px;
 	text-align:center;
