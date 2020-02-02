@@ -252,4 +252,21 @@ body {
     text-align: center;
   }
     
+  /* Homepage buttons */
+  .homeButton {
+    box-shadow:inset 0px 1px 0px 0px #192B3D;
+    background-color:#192B3D;
+    border-radius:9px;
+
+    display:inline-block;
+    cursor:pointer;
+    color:#FDEAA0;
+    font-family:Verdana;
+    font-size:18px;
+    font-weight:bold;
+    padding:13px 100px;
+    text-decoration:none;
+
+  }
+
   

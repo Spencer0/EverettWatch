@@ -89,15 +89,17 @@ var bottomBarModeTwoClick = function(event) {
     itemBlock(document.getElementById("modeTwoDiv"))
     itemHide(document.getElementById("dataPageDiv"))
     itemHide(document.getElementById("addDataPageDiv"))
+    itemHide(document.getElementById("homepage"))
     mode = "modeTwoDiv";
   }
 }
 
-var bottomBarDataClick = function(){
-  if(mode === "modeTwoDiv") {
+var bottomBarDataClick = function(event){
+  if(mode === "modeTwoDiv" || mode === "dataMode") {
     setBlock([...document.getElementsByClassName("dataMenuItem")])
     itemHide(document.getElementById("modeTwoDiv"))
     itemBlock(document.getElementById("dataPageDiv"))
+    itemHide(document.getElementById("homepage"))
     mode = "dataMode"
   }
 }
@@ -127,12 +129,17 @@ function login() {
 
   //hide login screen and show feed screen
   itemHide(document.getElementById("loginModeDiv"))
-  itemBlock(document.getElementById("dataPageDiv"))
-
+  itemBlock(document.getElementById("homepage"))
+  var id_slot = document.getElementById("userID")
+  id_slot.append(window.localStorage.getItem("userID"))
 
   //Save the current user name to local storage
   console.log("Storing: ", document.getElementById("emailInput").value, " In local storage ")
   window.localStorage.setItem("UserName", document.getElementById("emailInput").value)
+
+  var id_slot = document.getElementById("userID")
+  id_slot.innerHTML = window.localStorage.getItem("UserName")
+
   loggedInUser = document.getElementById("emailInput").value
   //Set mode to current mode
   mode = "dataMode"
