@@ -144,7 +144,7 @@ small">TBD</span></a>
   </div>
 
   <div id="modeTwoDiv" class="paddedPage">
-    <h1 align="center">This is still going through the requirment phase!</h1>
+    <h1 align="center">Everett Police Data Search </h1>
     <div w3-include-html="html/underConstruction.html"></div>
   </div>
 
@@ -157,7 +157,7 @@ small">TBD</span></a>
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <span id="modalClose" class="close">&times;</span>
+        <span id="modalClose" style="color:red" class="close">&times;</span>
         <h2><span class="fas fa-info-circle"></span>About</h2>
       </div>
       <div class="modal-body" id="aboutModalInfo">
@@ -178,7 +178,13 @@ small">TBD</span></a>
   </div>
 
   <!-- Begin SCRIPT section of document. -->
-
+  <!-- Third party scripts included first -->
+  <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
   <script src="scripts/includeHTML.js"></script>
   <script src="scripts/eventHandlers.js"></script>
   <script src="scripts/startUp.js"></script>
