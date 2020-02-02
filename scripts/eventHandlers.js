@@ -198,6 +198,7 @@ document.getElementById("aboutBtn").onclick = function(e) {
   modal.style.display = "block";
   itemHide(document.getElementById("aboutModalInfo"))
   itemBlock(document.getElementById("storageModalInfo"))
+  document.getElementById("storageModalInfoText").innerHTML = "Developed by: Spencer, Lisa, Martin, and Juan"
 
 };
 
@@ -240,12 +241,9 @@ function dataInputFormSubmission(){
 
   //After, pop up a modal with the current local storage info (append to modal)
   console.log(window.localStorage.getItem(loggedInUser))
-  itemHide(document.getElementById("aboutModalInfo"))
-  itemBlock(document.getElementById("storageModalInfo"))
   var storageInfo = window.localStorage.getItem(loggedInUser)
   console.log("Used name", loggedInUser, " to get info ", storageInfo)
-  document.getElementById("storageModalInfoText").innerHTML = ""
-  document.getElementById("storageModalInfoText").append(storageInfo)
+  document.getElementById("storageModalInfoText").innerHTML = "Thank you for submitting!"
   var modal = document.getElementById("myModal");
   modal.style.display = "block";
   itemHide(document.getElementById("menuBtnAlt"))
