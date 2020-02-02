@@ -93,7 +93,6 @@ var bottomBarModeTwoClick = function(event) {
     itemHide(document.getElementById("addDataPageDiv"))
     initDataTable()
     itemHide(document.getElementById("homepage"))
-
     mode = "modeTwoDiv";
   }
 }
@@ -145,6 +144,9 @@ function login() {
   id_slot.innerHTML = window.localStorage.getItem("UserName")
 
   loggedInUser = document.getElementById("emailInput").value
+
+  establishLogoClickEvent()
+  showDefaultTableStructures()
   //Set mode to current mode
   mode = "dataMode"
 }
@@ -167,6 +169,7 @@ document.getElementById("logOutBtn").onclick = function(e) {
   //Restore starting app state
   clearSideMenuSelection();
   document.getElementById("viewBtn").classList.add("menuItemSelected");
+  document.getElementById("LisasCoolLogo").onclick = ""
   startUp();
 };
 
@@ -213,6 +216,21 @@ document.getElementById("menuBtnAlt").onclick = function(e) {
   mode = "dataMode"
 
 };
+
+function establishLogoClickEvent(){
+  document.getElementById("LisasCoolLogo").onclick = function(e) {
+    clearSideMenuSelection();
+    itemHide(document.getElementById("addDataPageDiv"))
+    itemHide(document.getElementById("modeTwoDiv"))
+    itemHide(document.getElementById("dataPageDiv"))
+    itemBlock(document.getElementById("bottomBar"))
+    itemBlock(document.getElementById("menuBtn"))
+    itemHide(document.getElementById("menuBtnAlt"))
+    itemBlock(document.getElementById("homepage"))
+    mode = "dataMode"
+  
+  };
+}
 
 document.getElementById("modalClose").onclick = function(e) {
   var modal = document.getElementById("myModal");
@@ -300,7 +318,27 @@ function buildInputObject(){
 
 
 
+function showDefaultTableStructures(){
+  // Find a <table> element with id="myTable":
+  var table = document.getElementById("datatable");
 
+  // Create an empty <tr> element and add it to the 1st position of the table:
+  var row = table.insertRow(1);
+
+  // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+  var cell0 = row.insertCell(0);
+  var cell1 = row.insertCell(1);
+  var cell2 = row.insertCell(2);
+  var cell3 = row.insertCell(3);
+  var cell4 = row.insertCell(4);
+  var cell5 = row.insertCell(5);
+  cell0.innerHTML = "Sue May";
+  cell1.innerHTML = "1/12/2020";
+  cell2.innerHTML = "HELP!";
+  cell3.innerHTML = "Robbery";
+  cell4.innerHTML = "Hewitt Ave";
+  cell5.innerHTML = "A short but sweet description!";
+}
 
 const clearSideMenuSelection = () => [...document.getElementsByClassName("menuItem")].map(resetSideMenuElementStyle)
 const resetSideMenuElementStyle = (element) => element.classList.remove("menuItemSelected")
