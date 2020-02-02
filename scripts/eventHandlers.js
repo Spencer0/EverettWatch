@@ -276,8 +276,9 @@ function dataInputFormSubmission(){
 function buildInputObject(){
   var userSelection = {
     name: "",
+    suspectdescription: "",
     datereceived: "",
-    title: "Title",
+    title: "",
     incidenttype: "",
     location: "",
     description: ""
@@ -296,8 +297,10 @@ function buildInputObject(){
   var cell3 = row.insertCell(3);
   var cell4 = row.insertCell(4);
   var cell5 = row.insertCell(5);
+  var cell6 = row.insertCell(6);
 
-  userSelection.name = document.getElementById("name").value;
+  userSelection.name = document.getElementById("emailInput").value;
+  userSelection.suspectdescription = document.getElementById("suspectdescription").value;
   userSelection.datereceived = document.getElementById("datereceived").value;
   userSelection.title = document.getElementById("title").value;
   userSelection.incidenttype = document.getElementById("incidenttype").value;
@@ -307,11 +310,12 @@ function buildInputObject(){
 
   // Add some text to the new cells:
   cell0.innerHTML = userSelection.name;
-  cell1.innerHTML = userSelection.datereceived;
-  cell2.innerHTML = userSelection.title;
-  cell3.innerHTML = userSelection.incidenttype;
-  cell4.innerHTML = userSelection.location;
-  cell5.innerHTML = userSelection.description;
+  cell1.innerHTML = userSelection.suspectdescription;
+  cell2.innerHTML = userSelection.datereceived;
+  cell3.innerHTML = userSelection.title;
+  cell4.innerHTML = userSelection.incidenttype;
+  cell5.innerHTML = userSelection.location;
+  cell6.innerHTML = userSelection.description;
 
   return userSelection;
 }
@@ -332,12 +336,33 @@ function showDefaultTableStructures(){
   var cell3 = row.insertCell(3);
   var cell4 = row.insertCell(4);
   var cell5 = row.insertCell(5);
+  var cell6 = row.insertCell(6);
   cell0.innerHTML = "Sue May";
-  cell1.innerHTML = "1/12/2020";
-  cell2.innerHTML = "HELP!";
-  cell3.innerHTML = "Robbery";
-  cell4.innerHTML = "Hewitt Ave";
-  cell5.innerHTML = "A short but sweet description!";
+  cell1.innerHTML = "Tall male"
+  cell2.innerHTML = "1/12/2020";
+  cell3.innerHTML = "HELP!";
+  cell4.innerHTML = "Theft";
+  cell5.innerHTML = "Hewitt Ave";
+  cell6.innerHTML = "A short but sweet description!";
+
+  // Create an empty <tr> element and add it to the 1st position of the table:
+  var row2 = table.insertRow(1);
+
+  // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+  var cell0 = row2.insertCell(0);
+  var cell1 = row2.insertCell(1);
+  var cell2 = row2.insertCell(2);
+  var cell3 = row2.insertCell(3);
+  var cell4 = row2.insertCell(4);
+  var cell5 = row2.insertCell(5);
+  var cell6 = row2.insertCell(6);
+  cell0.innerHTML = "Jack White";
+  cell1.innerHTML = "Devilishly handsome Asian male"
+  cell2.innerHTML = "2/2/2020";
+  cell3.innerHTML = "Who is this man?";
+  cell4.innerHTML = "Suspicious Event";
+  cell5.innerHTML = "WSU";
+  cell6.innerHTML = "There's a man on the prowl!";
 }
 
 const clearSideMenuSelection = () => [...document.getElementsByClassName("menuItem")].map(resetSideMenuElementStyle)
