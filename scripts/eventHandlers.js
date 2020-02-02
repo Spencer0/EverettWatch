@@ -91,15 +91,18 @@ var bottomBarModeTwoClick = function(event) {
     itemHide(document.getElementById("dataPageDiv"))
     itemHide(document.getElementById("addDataPageDiv"))
     initDataTable()
+    itemHide(document.getElementById("homepage"))
+
     mode = "modeTwoDiv";
   }
 }
 
-var bottomBarDataClick = function(){
-  if(mode === "modeTwoDiv") {
+var bottomBarDataClick = function(event){
+  if(mode === "modeTwoDiv" || mode === "dataMode") {
     setBlock([...document.getElementsByClassName("dataMenuItem")])
     itemHide(document.getElementById("modeTwoDiv"))
     itemBlock(document.getElementById("dataPageDiv"))
+    itemHide(document.getElementById("homepage"))
     mode = "dataMode"
   }
 }
@@ -129,12 +132,17 @@ function login() {
 
   //hide login screen and show feed screen
   itemHide(document.getElementById("loginModeDiv"))
-  itemBlock(document.getElementById("dataPageDiv"))
-
+  itemBlock(document.getElementById("homepage"))
+  var id_slot = document.getElementById("userID")
+  id_slot.append(window.localStorage.getItem("userID"))
 
   //Save the current user name to local storage
   console.log("Storing: ", document.getElementById("emailInput").value, " In local storage ")
   window.localStorage.setItem("UserName", document.getElementById("emailInput").value)
+
+  var id_slot = document.getElementById("userID")
+  id_slot.innerHTML = window.localStorage.getItem("UserName")
+
   loggedInUser = document.getElementById("emailInput").value
   //Set mode to current mode
   mode = "dataMode"
@@ -251,16 +259,43 @@ function dataInputFormSubmission(){
 function buildInputObject(){
   var userSelection = {
     name: "",
-    age: 0,
-    height: 0,
-    gender: ""
+    datereceived: "",
+    title: "Title",
+    incidenttype: "",
+    location: "",
+    description: ""
   }
 
+  // Find a <table> element with id="myTable":
+  var table = document.getElementById("datatable");
+
+  // Create an empty <tr> element and add it to the 1st position of the table:
+  var row = table.insertRow(1);
+
+  // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+  var cell0 = row.insertCell(0);
+  var cell1 = row.insertCell(1);
+  var cell2 = row.insertCell(2);
+  var cell3 = row.insertCell(3);
+  var cell4 = row.insertCell(4);
+  var cell5 = row.insertCell(5);
+
   userSelection.name = document.getElementById("name").value;
-  userSelection.age = document.getElementById("age").value;
-  userSelection.height = document.getElementById("height").value;
-  userSelection.gender = document.getElementById("gender").value;
+  userSelection.datereceived = document.getElementById("datereceived").value;
+  userSelection.title = document.getElementById("title").value;
+  userSelection.incidenttype = document.getElementById("incidenttype").value;
+  userSelection.location = document.getElementById("location").value;
+  userSelection.description = document.getElementById("description").value;
   console.log("Created user input object", userSelection)
+
+  // Add some text to the new cells:
+  cell0.innerHTML = userSelection.name;
+  cell1.innerHTML = userSelection.datereceived;
+  cell2.innerHTML = userSelection.title;
+  cell3.innerHTML = userSelection.incidenttype;
+  cell4.innerHTML = userSelection.location;
+  cell5.innerHTML = userSelection.description;
+
   return userSelection;
 }
 

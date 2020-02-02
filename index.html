@@ -51,7 +51,7 @@
       <span id="topBarTitleWelcome" style="color:white; font-size: 18px">
        </span>
         <span id="topBarTitleData" style="color:white; font-size: 18px">
-        The Data.</span>
+        </span>
   </div>
 
 
@@ -59,9 +59,8 @@
   <div id="sideMenu" class="sidenav">
     <!--SIDE MENU TITLE -->
     <div class="sidenavtitle">
-      <img src='http://tiny.cc/chrisprofilepic' height='50' width='50'>
-      <span id="userID" style="font-size:14px">&nbsp;Chris
-        Hundhausen&nbsp;&nbsp;</span>
+      <img src=couglogo.jpg height='40' width='50'>
+      <span id="userID" style="font-size:14px">&nbsp;&nbsp;&nbsp;</span>
     </div>
     <!--BEGIN MENU CONTENT-->
     <div id="optionalMainMenuContent">
@@ -89,11 +88,11 @@
   <!-- BEGIN FIXED BOTTOM BAR -->
   <div id="bottomBar" class="bottombar" style="z-index: 100">
     <a id="mode1" class="bottomBarBtn"><span style="display:block; padding-top:3px"
-        class="nonMenuItem fas fa-th-list"></span><span style="display:block;font-size:
-small">Data</span></a>
+        class="nonMenuItem fas fa-id-badge"></span><span style="display:block;font-size:
+small">Police Reports</span></a>
     <a id="mode2" class="bottomBarBtn"><span style="display:block; padding-top:3px"
-        class="nonMenuItem fas fa-plus"></span><span style="display:block;font-size:
-small">TBD</span></a>
+        class="nonMenuItem fas fa-home"></span><span style="display:block;font-size:
+small">Community Reports</span></a>
   </div>
   <!-- END FIXED BOTTOM BAR-->
 
@@ -123,10 +122,6 @@ small">TBD</span></a>
           Log In
         </button>
         <br />
-        <a role="button" class="loginBtn"><img
-            src="https://drive.google.com/uc?export=view&id=1YXRuG0pCtsfvbDSTzuM2PepJdbBpjEut"></a>
-        <a role="button" class="loginBtn"><img
-            src="https://drive.google.com/uc?export=view&id=1ZoySWomjxiCnC_R4n9CZWxd_qXzY1IeL"></a>
       </form>
     </center>
   </div>
@@ -148,6 +143,11 @@ small">TBD</span></a>
     <div w3-include-html="html/underConstruction.html"></div>
   </div>
 
+  <!--Home page -->
+  <div id="homepage" class="paddedPage">
+    <div w3-include-html="html/homepage.html"></div>
+  </div>
+
   <!-- END APP PAGE DEFINITIONS -->
   <!-- MODAL DEFINITION -->
   <!-- Modal content -->
@@ -157,21 +157,20 @@ small">TBD</span></a>
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <span id="modalClose" style="color:red" class="close">&times;</span>
         <h2><span class="fas fa-info-circle"></span>About</h2>
+        <span id="modalClose" class="close">&times;</span>
       </div>
       <div class="modal-body" id="aboutModalInfo">
         <p>Individual Assignment Two Modal</p>
         <p>Strickland ltd 2020</p>
       </div>
       <div class="modal-body" id="storageModalInfo" style="display: none;">
-        <p>Local Storage Dump:</p>
         <span id="storageModalInfoText">
-
+          <p>Developed by: Spencer, Lisa, Martin, and Juan</p>
         </span>
       </div>
       <div class="modal-footer">
-        <h3>WEBDEV - 2020</h3>
+        <h3>Everett Watch - 2020</h3>
       </div>
     </div>
 

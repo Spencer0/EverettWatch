@@ -15,24 +15,27 @@
 /* Modal Header */
 .modal-header {
   padding: 2px 16px;
-  background-color: #4b634b;
-  color: #f89f9f;
+  background-color: #192B3D;
+  color: #FDEAA0;
   }
   
   /* Modal Body */
-  .modal-body {padding: 2px 16px;}
+  .modal-body {
+    padding: 2px 16px;
+    color: #192B3D;
+  }
   
   /* Modal Footer */
   .modal-footer {
   padding: 2px 16px;
-  background-color: #4b634b;
-  color: #f89f9f;
+  background-color: #192B3D;
+  color: #FDEAA0;
   }
   
   /* Modal Content */
   .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #ffffff;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
@@ -47,3 +50,5 @@
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
   }
+  #modalClose {color: #FDEAA0}
+
