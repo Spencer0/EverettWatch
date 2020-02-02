@@ -127,7 +127,7 @@ function login() {
 
   //hide login screen and show feed screen
   itemHide(document.getElementById("loginModeDiv"))
-  itemBlock(document.getElementById("dataPageDiv"))
+  itemBlock(document.getElementById("homepage"))
   var id_slot = document.getElementById("userID")
   id_slot.append(window.localStorage.getItem("userID"))
 
