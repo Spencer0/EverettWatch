@@ -393,6 +393,7 @@ function initDataTable(){
     return;
   }
   dataTableInitalized = true
+  $.fn.dataTable.ext.errMode = 'none';
   console.log(POLICE_DATA)
   $('#table_id').DataTable( {
       data: flattenPoliceDataArray(),
