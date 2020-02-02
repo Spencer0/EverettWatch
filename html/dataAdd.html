@@ -1,27 +1,48 @@
 <br><br><br><br><br>
 <center>
 
-<form onsubmit="dataInputFormSubmission(); return false;">
-    <label for="name">
-        What is your name? 
-    </label><br>
-    <input id="name" name="i_like" required> <br>
-    <label for="age">
-        What is your age(years)? 
-    </label><br>
-    <input type="range" min="1" max="100" value="24" class="slider" id="age" name="i_like" required> <br>
-    <label for="height">
-        What is your height (inches)? 
-    </label><br>
-    <input type="range" min="1" max="125" value="73" class="slider" id="height" name="i_like" required> <br>
-    <label for="gender">
-        What is your gender? 
-    </label><br>
-    <select id="gender">
-        <option value="M">M</option>
-        <option value="F">F</option>
-        <option value="X">X</option>
-   </select>
-    <button 
-    id="inputSubmitButton">Submit</button>
-  </form></center>
+    <form onsubmit="dataInputFormSubmission(); return false;">
+        <label for="name">
+            What is your name?
+        </label><br>
+        <input id="name" required> <br>
+        <label for="datereceived">
+            When was the incident?
+        </label><br>
+        <input type="date" id="datereceived" required> <br>
+        <label for="title">
+            Title?
+        </label><br>
+        <input id="title" required><br>
+        <label for="incidenttype">
+            What is the incident type?
+        </label><br>
+        <select id="incidenttype">
+            <option value="911 Hang Up">911 Hang Up</option>
+            <option value="Animal Complaint">Animal Complaint</option>
+            <option value="Assist">Assist</option>
+            <option value="Death Investigation">Death Investigation</option>
+            <option value="Disturbance">Disturbance</option>
+            <option value="Driving Under The Influence">Driving Under The Influence</option>
+            <option value="Follow-Up">Follow-Up</option>
+            <option value="Nuisance">Nuisance</option>
+            <option value="Parking Enforcement">Parking Enforcement</option>
+            <option value="Security Check">Security Check</option>
+            <option value="Substance Abuse">Substance Abuse</option>
+            <option value="Suspicious Event">Suspicious Event</option>
+            <option value="Traffic">Traffic</option>
+            <option value="Trespass">Trespass</option>
+            <option value="Theft">Theft</option>
+        </select><br>
+        <label for="location">
+            Location?
+        </label><br>
+        <input id="location" required><br>
+        <label for="description">
+            Description of the incident.
+        </label><br>
+        <textarea id="description" style="height:200px;width:200px;text-align: top;" required></textarea>
+        <br><br>
+        <button id="inputSubmitButton">Submit</button>
+    </form>
+</center>
