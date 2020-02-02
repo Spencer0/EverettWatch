@@ -362,7 +362,7 @@ function showDefaultTableStructures(){
   cell3.innerHTML = "Who is this man?";
   cell4.innerHTML = "Suspicious Event";
   cell5.innerHTML = "WSU";
-  cell6.innerHTML = "There's a man on the prowl!";
+  cell6.innerHTML = "There's a man on the prowl! Heard him referred to as Bolong Zeng.";
 }
 
 const clearSideMenuSelection = () => [...document.getElementsByClassName("menuItem")].map(resetSideMenuElementStyle)
