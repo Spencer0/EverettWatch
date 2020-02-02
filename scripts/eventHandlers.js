@@ -14,7 +14,8 @@ const itemDisable = (element) => element.disabled = true;
 const itemFocus = (element) => element.focus();
 const toggleEnable = (element) => element.disabled = element.disabled ? false : true; 
 const POLICE_MAN = "👮";
-var dataTableInitalized = false
+var dataTableInitalized = false;
+var communityDataInitalized = false;
 
 
 
@@ -323,6 +324,9 @@ function buildInputObject(){
 
 
 function showDefaultTableStructures(){
+  if (communityDataInitalized) {
+    return;
+  }
   // Find a <table> element with id="myTable":
   var table = document.getElementById("datatable");
 
@@ -363,6 +367,7 @@ function showDefaultTableStructures(){
   cell4.innerHTML = "Suspicious Event";
   cell5.innerHTML = "WSU";
   cell6.innerHTML = "There's a man on the prowl! Heard him referred to as Bolong Zeng.";
+  communityDataInitalized = true
 }
 
 const clearSideMenuSelection = () => [...document.getElementsByClassName("menuItem")].map(resetSideMenuElementStyle)
