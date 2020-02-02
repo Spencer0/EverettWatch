@@ -310,7 +310,7 @@ function flattenPoliceDataArray(){
   outside = []
 
   function myIteratorFunction(item, index) {
-    thisData = [item.eventyear, item.incidenttype, item.eventaddressby100block, item.precinct, item.eventnumber]
+    thisData = [item.datetimereceived, item.incidenttype, item.eventaddressby100block, item.precinct, item.eventnumber]
     outside.push(thisData)
   } 
 
