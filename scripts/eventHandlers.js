@@ -13,6 +13,7 @@ const itemClearText = (element) => element.value = "";
 const itemDisable = (element) => element.disabled = true;
 const itemFocus = (element) => element.focus();
 const toggleEnable = (element) => element.disabled = element.disabled ? false : true; 
+const POLICE_MAN = "👮";
 
 
 
@@ -89,7 +90,9 @@ var bottomBarModeTwoClick = function(event) {
     itemBlock(document.getElementById("modeTwoDiv"))
     itemHide(document.getElementById("dataPageDiv"))
     itemHide(document.getElementById("addDataPageDiv"))
+    initDataTable()
     itemHide(document.getElementById("homepage"))
+
     mode = "modeTwoDiv";
   }
 }
@@ -295,6 +298,33 @@ function buildInputObject(){
 
   return userSelection;
 }
+
+
+function flattenPoliceDataArray(){
+  outside = []
+
+  function myIteratorFunction(item, index) {
+    thisData = [item.eventyear, item.eventnumber]
+    outside.push(thisData)
+  } 
+
+  POLICE_DATA.forEach(myIteratorFunction)
+  
+  console.log("outside" , outside)
+
+  return outside
+}
+function initDataTable(){
+  console.log(POLICE_DATA)
+  $('#table_id').DataTable( {
+      data: flattenPoliceDataArray(),
+      columns: [
+        { title: "event year" },
+        { title: "event name" },
+    ]
+  } );
+}
+
 
 const clearSideMenuSelection = () => [...document.getElementsByClassName("menuItem")].map(resetSideMenuElementStyle)
 const resetSideMenuElementStyle = (element) => element.classList.remove("menuItemSelected")
