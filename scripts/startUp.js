@@ -16,7 +16,7 @@ var modeToTitle = {
 
 //Bind bottomBarBtnClick function to all elements of class bottomBarBtn
 var dataButton = document.getElementById("mode1");
-dataButton.addEventListener("click", bottomBarDataClick);
+dataButton.addEventListener("click",bottomBarDataClick);
 var modeTwoButton = document.getElementById("mode2")
 modeTwoButton.addEventListener("click",bottomBarModeTwoClick);
 
@@ -27,7 +27,7 @@ fetch('https://data.everettwa.gov/resource/f6vp-3svh.json')
   })
   .then((myJson) => {
     console.log(myJson);
-    POLICE_DATA = myJson;
+    POLICE_DATA = myJson
   });
 
 
